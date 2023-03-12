@@ -173,12 +173,7 @@
                                     </a>
                                 </div>
                                 <div class="col-sm-3 col-xl-3 col-md-3">
-                                    <a href="#">
-                                        <div class="card" style="width: 100%;">
-                                            <img src="{{'BevisSneaker'}}/images/product/ad-08.jpg" class="card-img-top" >
-                                        </div>
-                                    </a>
-                                
+                                     
                                   
                                 </div>
                             </div>
