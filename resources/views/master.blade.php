@@ -155,12 +155,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-sm-3 col-xl-3 col-md-3">
-                                   
-                                 
-                                  
-                                </div>
-                                <div class="col-sm-3 col-xl-3 col-md-3">
+                            
                                      
                                   
                                 </div>
