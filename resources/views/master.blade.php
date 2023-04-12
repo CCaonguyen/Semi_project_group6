@@ -164,11 +164,7 @@
                                             <img src="https://cdn.tgdd.vn/Products/Images/42/223602/iphone-13-pink-2-600x600.jpg" class="card-img-top" >
                                         </div>
                                     </a>
-                                    <a href="#">
-                                        <div class="card" style="width: 100%; ">
-                                            <img src="https://cdn.tgdd.vn/Products/Images/42/240259/iphone-14-128gb-vang-thumbnew-600x600.jpeg" class="card-img-top" >
-                                        </div>
-                                    </a>
+                                    
                                 </div>
                             </div>
                         </div>
