@@ -16,30 +16,30 @@ use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
-    // public function getBill()
-    // {
-    //     $bill = DB::table('cart')
-    //         ->join('product', 'cart.product', '=', 'product.productid')
-    //         ->join('users', 'cart.username', '=', 'users.username')
-    //         ->join('size', 'cart.size', '=', 'size.sizeid')
-    //         ->select('cart.*','product.*','size.size','users.username')
-    //         ->where('cart.username', Auth()->user()->username)
-    //         ->get();
-    //         dd($bill);
-    //     return view('purchase', ['bill' => $bill]);
-    // }
+    public function getBill()
+    {
+        $bill = DB::table('cart')
+            ->join('product', 'cart.product', '=', 'product.productid')
+            ->join('users', 'cart.username', '=', 'users.username')
+            ->join('size', 'cart.sizeid', '=', 'size.sizeid')
+            ->select('cart.*','product.*','size.size','users.username')
+            ->where('cart.username', Auth()->user()->username)
+            ->get();
+            dd($bill);
+        return view('purchase', ['bill' => $bill]);
+    }
 
     public function Bill(Request $request)
     {
 
-        // $cart = Cart::where('username', Auth()->user()->username)->get();
+        $cart = Cart::where('username', Auth()->user()->username)->get();
         $bill = new Bill;
         $cart =  DB::table('cart')
             ->where('username', Auth()->user()->username)->first();
         $bill->cart = $cart->cartid;
         $bill->product = $cart->product;
-        $bill->size=$cart->sizeid;
-        $bill->category=$cart->categoryid;
+        // $bill->size = $cart->size;
+        // $bill->category=$cart->category;
         $bill->quantity =$cart->quantity;
         $bill->purchasedate = date('Y-m-d');
         $bill->total = $request->total;
@@ -54,9 +54,9 @@ class OrderController extends Controller
             ->join('cart', 'bill.cart', '=', 'cart.cartid')
             ->join('product', 'cart.product', '=', 'product.productid')
             ->join('users', 'cart.username', '=', 'users.username')
-            ->join('size', 'cart.size', '=', 'size.sizeid')
-            ->join('category', 'cart.category', '=', 'size.categoryid')
-            ->select('bill.*','cart.*','product.*','size.size','users.*')
+            ->join('size', 'cart.sizeid', '=', 'size.sizeid')
+             ->join('category', 'cart.categoryid', '=', 'size.categoryid')
+            ->select('bill.*','cart.*','product.*','size.*','users.*')
             ->where('cart.username', Auth()->user()->username)
             ->get();
         return view('purchase', ['bill' => $bill]);
@@ -70,7 +70,7 @@ class OrderController extends Controller
             ->join('users', 'cart.username', '=', 'users.username')
             ->join('size', 'cart.size', '=', 'size.sizeid')
             ->join('category', 'cart.category', '=', 'size.categoryid')
-            ->select('bill.*','cart.*','product.*','size.size','users.*')
+            ->select('bill.*','cart.*','product.*','size.*','users.*')
             ->get('bill.*');
         return view('admin.manage-order', ['bill' => $bill]);
     }

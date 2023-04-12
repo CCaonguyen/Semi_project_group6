@@ -34,7 +34,7 @@
                                                     $category = DB::table('category')->select('*')->get();
                                                     $color = DB::table('color')->select('*')->get();
                                                     $size = DB::table('size')->select('*')->get();
-                                                    @endphp
+                                                @endphp
 
                                                   
                                                 
@@ -45,7 +45,7 @@
                                                     
                                                    <select class="form-select" type="text" id=""name = "colorid" aria-label="Default select example">
                                                     @foreach ($color as $item)
-                                                    <option value="{{$item ->color}}">{{$item ->color}}</option>
+                                                        <option value="{{$item ->color}}">{{$item ->color}}</option>
                                                     @endforeach
                                                       </select> 
                                                     </th>
@@ -53,8 +53,8 @@
                                                     <th>
                                                     <select class="form-select" type="text" id=""name = "categoryid" aria-label="Default select example"> 
                                                     @foreach ($category as $item)
-                                                   <option value="{{$item ->category}}">{{$item ->category}}</option>
-                                                   @endforeach
+                                                        <option value="{{$item ->category}}">{{$item ->category}}</option>
+                                                    @endforeach
                                              
                                                  
                                                   </select> 
@@ -90,13 +90,11 @@
                                             <th>{{ $value -> productid}}</th>
                                             <th>{{ $value -> productname}}</th>
                                             <th>{{ $value -> price}}</th>
-                                            <th>{{ $value -> categoryid}}</th>
-                                            <th>{{ $value -> colorid}}</th>
-                                            <th>{{ $value -> sizeid}}</th>
+                                            <th>{{ $value -> category}}</th>
+                                            <th>{{ $value -> color}}</th>
+                                            <th>{{ $value -> size}}</th>
                                             <th>{{ $value -> image}}</th>
-
                                             <th>{{ $value -> description}}</th>
-                                            
                                             <th><a href="{{route('delete',$value->productid)}}">Delete</a></th>
                                             <th><a href="{{route('HH',$value->productid)}}">Update</a></th>
                                         </tr>

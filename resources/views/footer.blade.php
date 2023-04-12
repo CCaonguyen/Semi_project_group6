@@ -21,7 +21,7 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-xl-3">
-                                    <a href="#"><h4>roductRODUCT</h4></a>
+                                    <a href="#"><h4>Product</h4></a>
                                     <ul>
                                         <li><a href="#">Iphone</a></li>
                                        

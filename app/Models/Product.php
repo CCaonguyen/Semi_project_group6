@@ -15,7 +15,7 @@ class Product extends Model
 
     public function color()
     {
-        return $this->belongsTo(Color::class);
+        return $this->belongsTo(Color::class,'colorid','colorid');
     }
     public function size()
     {

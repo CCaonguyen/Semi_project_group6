@@ -18,45 +18,48 @@
          </style>
         <div class="recommend">
             <h1 style="text-align: center; font-family: 'URW Geometric'; padding: 50px;">- NEWS -</h1>
-            @foreach ($news as $value )
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xl-2"></div>
-                    <div class="col-xl-8">
-                        <img src="BevisSneaker/images/News/{{$value->images}}" class="news-img">
+        </div>
+    </section>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Blog Area Start ##### -->
+    <div class="blog-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+            @foreach ( $news as $value )
+
+            <!-- Single Post Start -->
+            <div class="single-blog-post mb-100 wow fadeInUp" data-wow-delay="100ms">
+                {{-- @foreach ( $news as $key => $value ) --}}
+                <!-- Post Thumb -->
+                <div class="blog-post-thumb mt-30">
+                    <a href="#"><img src="{{asset($value->images)}}" alt=""></a>
+                    {{-- sua? lai link anh cho nay --}}
+                    <!-- Post Date -->
+                    <div class="post-date">
+                        <span>15</span>
+                        <span>June ‘18</span>
                     </div>
-                    <div class="col-xl-2"></div>
                 </div>
-                <div class="row">
-                    <div class="col-xl-3"></div>
-                    <div class="col-xl-6">
-                        <!-- slideshow -->
-                        <div class="container-fluid" style="padding: 0;">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <h2 style="text-align: center; font-family: 'URW Geometric';font-size:70px; padding: 50px;">{{$value->heading}}</h2>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <p style="text-align:justify; font-size:120%">
-                                        {{$value->paraphase}}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+
+                <!-- Blog Content -->
+                <div class="blog-content">
+                    <!-- Post Title -->
+                    <a href="#" class="post-title">{{$value->title}}</a>
+                    <!-- Post Meta -->
+                    <div class="post-meta d-flex mb-30">
+                        <p class="post-author">By<a href="#">>{{$value->author}}</a></p>
+                        <p class="tags">in<a href="#"> Events</a></p>
+                        <p class="tags"><a href="#">2 Comments</a></p>
                     </div>
-                    <div class="col-xl-3"></div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-3"></div>
-                    <div class="col-xl-6">
-                        <b><i>{{$value->author}}</i></b>
-                    </div>
-                    <div class="col-xl-3"></div>
+                    <!-- Post Excerpt -->
+                    <p>
+                        {{$value->content}}
+                        </p>
                 </div>
             </div>
-            @endforeach
+             @endforeach
         </div>
    </section>
 @include('footer')

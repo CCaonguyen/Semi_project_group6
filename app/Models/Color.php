@@ -10,7 +10,7 @@ class color extends Model
 
     public function product()
     {
-        return $this->hasMany(Product::class);
+        return $this->hasMany(Product::class, 'colorid');
     }
 
     use HasFactory;

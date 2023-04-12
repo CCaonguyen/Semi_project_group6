@@ -124,68 +124,49 @@
                                 <div class="col-sm-3 col-xl-3 col-md-3">
                                     <a href="#">
                                         <div class="card" style="width: 100%; ">
-                                            <img src="{{'BevisSneaker'}}/images/product/ad-01.jpg" class="card-img-top" >
+                                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/250257/iphone-13-red-1-600x600.jpg" class="card-img-top" >
                                         </div>
                                     </a>
                                     <a href="#">
                                         <div class="card" style="width: 100%; ">
-                                            <img src="{{'BevisSneaker'}}/images/product/ad-09.jpg" class="card-img-top" >
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="card" style="width: 100%; ">
-                                            <img src="{{'BevisSneaker'}}/images/product/ad-05.jpg" class="card-img-top" >
+                                            <img src="https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-den-thumb-600x600.jpg" class="card-img-top" >
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col-sm-3 col-xl-3 col-md-3">
                                     <a href="#">
                                         <div class="card" style="width: 100%;">
-                                            <img src="{{'BevisSneaker'}}/images/product/ad-02.jpg" class="card-img-top" >
+                                            <img src="https://cdn.tgdd.vn/Products/Images/42/247508/iphone-14-pro-vang-thumb-600x600.jpg" class="card-img-top" >
                                         </div>
                                     </a>
                                     <a href="#">
                                         <div class="card" style="width: 100%; ">
-                                            <img src="{{'BevisSneaker'}}/images/product/ad-10.jpg" class="card-img-top" >
+                                            <img src="https://cdn.tgdd.vn/Products/Images/42/153856/iphone-11-trang-600x600.jpg" class="card-img-top" >
                                         </div>
                                     </a>
-                                    <a href="#">
-                                        <div class="card" style="width: 100%; ">
-                                            <img src="{{'BevisSneaker'}}/images/product/ad-06.jpg" class="card-img-top" >
-                                        </div>
-                                    </a>
+                                   
                                 </div>
                                 <div class="col-sm-3 col-xl-3 col-md-3">
                                     <a href="#">
                                         <div class="card" style="width: 100%; ">
-                                            <img src="{{'BevisSneaker'}}/images/product/ad-03.jpg" class="card-img-top" >
+                                            <img src="https://cdn.tgdd.vn/Products/Images/42/245545/iPhone-14-plus-thumb-den-600x600.jpg" class="card-img-top" >
                                         </div>
                                     </a>
                                     <a href="#">
                                         <div class="card" style="width: 100%; ">
-                                            <img src="{{'BevisSneaker'}}/images/product/ad-07.jpg" class="card-img-top" >
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="card" style="width: 100%; ">
-                                            <img src="{{'BevisSneaker'}}/images/product/ad-11.jpg" class="card-img-top" >
+                                            <img src="https://cdn.tgdd.vn/Products/Images/42/223602/iphone-13-pink-2-600x600.jpg" class="card-img-top" >
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col-sm-3 col-xl-3 col-md-3">
                                     <a href="#">
                                         <div class="card" style="width: 100%;">
-                                            <img src="{{'BevisSneaker'}}/images/product/ad-08.jpg" class="card-img-top" >
+                                            <img src="https://cdn.tgdd.vn/Products/Images/42/223602/iphone-13-pink-2-600x600.jpg" class="card-img-top" >
                                         </div>
                                     </a>
                                     <a href="#">
                                         <div class="card" style="width: 100%; ">
-                                            <img src="{{'BevisSneaker'}}/images/product/ad-12.jpg" class="card-img-top" >
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="card" style="width: 100%; ">
-                                            <img src="{{'BevisSneaker'}}/images/product/ad-04.jpg" class="card-img-top" >
+                                            <img src="https://cdn.tgdd.vn/Products/Images/42/240259/iphone-14-128gb-vang-thumbnew-600x600.jpeg" class="card-img-top" >
                                         </div>
                                     </a>
                                 </div>

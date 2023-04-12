@@ -6,16 +6,10 @@ use App\Models\Category;
 use App\Models\Size;
 use App\Models\Color;
 use App\Models\Cart;
-use App\Models\User;
-Use App\Models\Bill;
-use Illuminate\Support\Facades\Response;
+
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Eloquent\Model;
-
-
-
 
 class ProductController extends Controller
 {
@@ -28,11 +22,11 @@ class ProductController extends Controller
 
     public function getAllAdminProduct()
     {
-
         $product = DB::table('product')
-            // ->join('category', 'product.category', '=', 'category.categoryid')
-            // ->join('color', 'product.color', '=', 'color.colorid')
-            // ->select('product.*','category.category','color.colorname')
+            ->join('category', 'product.categoryid', '=', 'category.categoryid')
+            ->join('color', 'product.colorid', '=', 'color.colorid')
+            ->join('size','product.sizeid', '=', 'size.sizeid')
+            ->select('product.*','category.*','color.*','size.*')
             ->get();
         return view('admin.admin-product', compact("product"));
     }
@@ -62,22 +56,20 @@ class ProductController extends Controller
     {
         $data = Product::find($productid);
         $size = Size::all();
-        // $color = DB::table('color')
-        //     ->join('product', 'product.color', '=', 'color.colorid')
-        //     ->select('color.*')
-        //     ->where('product.productid', $productid)
-        //     ->get();
+        $color = DB::table('color')
+            ->join('product', 'product.colorid', '=', 'color.colorid')
+            ->select('color.*')
+            ->where('product.productid', $productid)
+            ->get();
         $color = Color::all();
         $category = DB::table('category')
-            ->join('product', 'product.category', '=', 'category.categoryid')
+            ->join('product', 'product.categoryid', '=', 'category.categoryid')
             ->select('category.*')
             ->where('product.productid', $productid)
             ->get();
 
 
         return view('detail', compact('data', 'size', 'color','category'));
-        // return view('detail',compact('size','color'), ['data' => $data]);
-
     }
 
     public function updateProduct(Request $request, $productid)
@@ -101,14 +93,13 @@ class ProductController extends Controller
         return view('admin.admin-updateProduct',$data);
     }
 
-
-
     public function getCart(Request $request)
     {
         $data = new Cart;
         $data->username = Auth()->user()->username;
         $data->product = $request->productid;
-        $data->quantity = $value ?? '1';
+        $data->quantity = $values ?? '1';
+        $data ->category = 1;
         $data->size = $request->size;
         $data->save();
         $alertadd = 'Add to cart successfully!';

@@ -12,7 +12,7 @@ class Cart extends Model
 {
     use HasFactory;
     protected $table = 'cart';
-    protected $fillable = ['cartid','username','product','quantity','size'];
+    protected $fillable = ['cartid','username','detailid'];
     protected $primaryKey = 'cartid';
     public $timestamps = false;
 

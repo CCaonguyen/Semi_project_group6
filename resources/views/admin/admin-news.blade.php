@@ -1,42 +1,71 @@
 @include('admin.admin-header')
 @yield('admin-news')
  <!-- Begin Page Content -->
+ 
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-6 text-gray-800">Create News Table</h1>
-                  
+                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
+                        For more information about DataTables, please visit the <a target="_blank"
+                            href="https://datatables.net">official DataTables documentation</a>.</p>
+
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Database Product | BEVIS</h6>
                         </div>
-                        <div class="card-body">
+                         <div class="card-body">
                             <div class="table-responsive">
-                                <div class="form-product">
-                                    <ul style="list-style: none">
-                                        <form action="" method="post" class="row g-3">
-                                            @csrf
-                                            <div class="input-group mb-6">
-                                                <span class="input-group-text" id="basic-addon1">Heading</span>
-                                                <input type="text" name="heading" class="form-control"   aria-describedby="basic-addon1">
-                                            </div>
-                                            <div class="input-group mb-6">
-                                                <span class="input-group-text" id="basic-addon1">Author</span>
-                                                <input type="text" name="author" class="form-control"   aria-describedby="basic-addon1">
-                                            </div>
-                                            <div class="input-group">
-                                                <span class="input-group-text">Paraphase</span>
-                                                <textarea name="paraphase" class="form-control" aria-label="With textarea"></textarea>
-                                            </div>
-                                            <div class="mb-6">
-                                                <label for="formFile" class="form-label">Images</label>
-                                                <input name="images" class="form-control" type="file" id="formFile">
-                                            </div>
-                                            <button class="btn btn-dark" type="submit">Publish</button>
-                                        </form>
-                                    </ul>
-                                </div>
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>ID News</th>
+                                            <th>username</th>
+                                            <th>title</th>
+                                            <th>author</th>
+                                            <th>Content</th>
+                                            <th>Images</th>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <form action="" method="post">
+                                                @csrf
+                                                <th></th>
+                                                <th><input type="text" name="newsID" id=""></th>
+                                                <th><input type="text" name="author" id=""></th>
+                                                <th><input type="text" name="title" id=""></th>
+                                                <th><input type="text" name="content" id=""></th>
+                                               
+                                                <th><input type="file" name="images" id="" multiple></th>
+                                                
+                                                <th>
+                                                    <input type="submit" value="Create">
+                                                </th>
+                                            </form>
+                                            
+                                        </tr>
+
+                                    </thead>
+                                    <tbody>
+                                        @foreach ( $news as $key => $value )
+                                        <tr>
+                                            <th>{{ $key + 1}}</th>
+                                            <th>{{ $value -> newsID}}</th>
+                                            <th>{{ $value -> author}}</th>
+                                            <th>{{ $value -> title}}</th>
+                                            <th>{{ $value -> content}}</th> 
+                                           
+                                           
+                                            <th>{{ $value -> images}}</th>
+                                            
+                                            <th><a href="{{route('delete-news',$value->newsID)}}">Delete</a></th>
+                                          
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>

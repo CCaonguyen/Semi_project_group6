@@ -8,10 +8,7 @@ use App\Models\Product;
 class category extends Model
 {
     use HasFactory;
-    public function product()
-    {
-        return $this->hasMany(Product::Class);
-    }
+    
     protected $table = 'category';
     protected $fillable = ['categoryid','category', 'categorydescription'];
     protected $primaryKey = 'categoryid';

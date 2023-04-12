@@ -49,15 +49,15 @@ class User extends Authenticatable
 
     protected $table = 'users';
     protected $fillable = [
+        'id',
         'username',
+        'email',
+        'email_verified_at',
         'password',
         'role',
-        'email',
-        'firstname',
-        'lastname',
+        'phonemunber',
         'address',
-        'phone',
-        'status',
+        'city',
         'created_at',
         'updated_at',
     ];
