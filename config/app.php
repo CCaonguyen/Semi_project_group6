@@ -5,7 +5,7 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Application Name
-    |-----------------------------h---------------------------------------------
+    |-------------------------66----h---------------------------------------------
     |
     | This value is the name of you77r application. This value is used when the
     | framework need0s to p-lace the application's name in a notification or
