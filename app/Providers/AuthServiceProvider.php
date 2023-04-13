@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Gate;
 class AuthServiceProvider extends ServiceProvider
 {
     /**
-     * -The policy mappings for the application.
+     * -The policy- mappings for the application.
      *
      * @var array<c--lass-string, class-string>
      */
